@@ -1,0 +1,137 @@
+{{ define "main" }}
+
+<div class="mw9 center ph3-ns mid-gray">
+  <div class="cf">
+    <div class="fl w-100 w-33-ns center pa3">
+      <div class="pv4">
+	<!--<img class="w-50" src="/images/crowd_vectorized.svg"/>-->
+	<h1 class="f2 flex-none">Human-Centered Design</h1>
+	<h2 class="f3">We believe our users should always be included in model design, assessment, and monitoring</h2>
+      </div>
+    </div>
+    <div class="fl w-100 w-33-ns center pa3">
+      <div class="pv4">
+<!--<img class="w-50" src="/images/data-quality.svg"/>-->
+	<h1 class="f2 flex-none">Data Quality</h1>
+	<h2 class="f3">We're obsessed about Data Quality, the magic souce behind great AI products</h2>
+      </div>
+    </div>
+    <div class="fl w-100 w-33-ns center pa3">
+      <div class="pv4">
+	<!--<img class="w-50" src="/images/scientist.svg"/>-->
+	<h1 class="f2 flex-none">Science Minded</h1>
+	<h2 class="f3">We deliver long-term value by bridging the academic and business worlds</h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="v-100 w-100 bg-dark-frost mv4">
+  <div class="dtc v-mid white mid-gray ph4 ph6-l pv6-l pv4">
+    <h1 class="f2-m f1-l f-subheadline-s lh-title tc">
+      Artificial Intelligence can only improve
+      our lifes if humans are always top-priority. Fairness, interpretability, privacy and security are non-negotiable.
+    </h1>
+  </div> 
+</div>
+
+<div class="mw9 center ph3-ns mid-gray">
+  <div class="cf lh-title ph4">
+    <!--<h1 class="f2">We convert messy data into information.</h1>-->
+    <h1 class="f2">We develop your workforce.</h1>
+    <h1 class="f2">We transform academic literature into business value.</h1>
+    <h1 class="f2 darkest-frost">We integrate responsible AI practices into your ML workflow.</h1>
+  </div>
+</div>
+
+
+<div class="mid-gray mt4">
+  <div class="mw9 center ph1-ns ">
+    <div class="cf">
+      <div class="fl w-100 w-33-ns center ph3">
+	<div class="bg-white pv2 shadow-1">
+	<div class="ph4">
+	  <h1 class="f2 flex-none">Future-proof workforce</h1>
+	  <h2 class="f3">Are your employees ready for the data revolution? We
+	  design training for your business needs.</h2>
+	</div>
+	</div>
+      </div>
+
+      <div class="fl w-100 w-33-ns center ph3">
+	<div class="bg-white pv2 shadow-1">
+	<div class="ph4">
+	  <h1 class="f2 flex-none">Invite science in</h1>
+	  <h2 class="f3">Reading and implementing the latest research 
+	  is hard. We can help with the heavy-lifting,
+	  implementing best practices.</h2>
+	</div>
+	</div>
+      </div>
+      <div class="fl w-100 w-33-ns center ph3">
+	<div class="bg-white pv2 shadow-1">
+	<div class="ph4">
+	  <h1 class="f2 flex-none">Responsible AI</h1>
+	  <h2 class="f3">We all want to change the world for better. We build
+	  pipelines that are transparent, reproducible and fair.</h2>
+	</div>
+	</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <article class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy">
+    {{ .Content }}
+  </article>
+  {{/* Define a section to pull recent posts from. For Hugo 0.20 this will default to the section with the most number of pages. */}}
+  {{ $mainSections := .Site.Params.mainSections | default (slice "post") }}
+  {{/* Create a variable with that section to use in multiple places. */}}
+  {{ $section := where .Site.RegularPages "Section" "in" $mainSections }}
+  {{/* Check to see if the section is defined for ranging through it */}}
+  {{ $section_count := len $section }}
+  {{ if ge $section_count 1 }}
+    {{/* Derive the section name  */}}
+    {{ $section_name := index (.Site.Params.mainSections) 0 }}
+
+    <div class="pa3 pa4-ns w-100 w-70-ns center">
+      {{/* Use $section_name to get the section title. Use "with" to only show it if it exists */}}
+       {{ with .Site.GetPage "section" $section_name }}
+          <h1 class="flex-none">
+            {{ $.Param "recent_copy" | default (i18n "recentTitle" .) }}
+          </h1>
+        {{ end }}
+
+      {{ $n_posts := $.Param "recent_posts_number" | default 3 }}
+
+      <section class="w-100 mw8">
+        {{/* Range through the first $n_posts items of the section */}}
+        {{ range (first $n_posts $section) }}
+          <div class="relative w-100 mb4">
+            {{ partial "summary-with-image.html" . }}
+          </div>
+        {{ end }}
+      </section>
+
+      {{ if ge $section_count (add $n_posts 1) }}
+      <section class="w-100">
+        <h1 class="f3">{{ i18n "more" }}</h1>
+        {{/* Now, range through the next four after the initial $n_posts items. Nest the requirements, "after" then "first" on the outside */}}
+        {{ range (first 4 (after $n_posts $section))  }}
+          <h2 class="f5 fw4 mb4 dib mr3">
+            <a href="{{ .RelPermalink }}" class="link black dim">
+              {{ .Title }}
+            </a>
+          </h2>
+        {{ end }}
+
+        {{/* As above, Use $section_name to get the section title, and URL. Use "with" to only show it if it exists */}}
+        {{ with .Site.GetPage "section" $section_name }}
+          <a href="{{ .RelPermalink }}" class="link db f6 pa2 br3 bg-mid-gray white dim w4 tc">{{ i18n "allTitle" . }}</a>
+        {{ end }}
+        </section>
+      {{ end }}
+
+      </div>
+  {{ end }}
+{{ end }}

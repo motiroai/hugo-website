@@ -1,0 +1,38 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'Motiro AI'
+theme = "ananke"
+
+
+# themesDir = "../.."
+resourceDir = "../resources"
+
+googleAnalytics = ""
+enableRobotsTXT = true
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+[params]
+  favicon = ""
+  site_logo = "/images/motiro-ai-logo.svg"
+  description = "Motiro AI - Human-centered Artificial Intelligence"
+  facebook = ""
+  twitter = ""
+  instagram = ""
+  youtube = ""
+  github = ""
+  gitlab = ""
+  linkedin = ""
+  mastodon = ""
+  slack = ""
+  stackoverflow = ""
+  rss = ""
+  # choose a background color from any on this page: http://tachyons.io/docs/themes/skins/ and preface it with "bg-"
+  custom_css = ["css/custom.css"]
+  body_classes = "avenir bg-near-white"
+  background_color_class = "bg-dark-gray"
+  featured_image = "/images/hero-background.png"
+  recent_posts_number = 3
