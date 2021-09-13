@@ -1,12 +1,12 @@
 ---
 title: "Our team"
 description: "Get to know who powers Motiro AI"
-featured_image: "/images/hero-background.png"
+featured_image: "/images/hero-background.webp"
 type: page
 menu: main
 
 ---
-{{< figure src="/images/team/henrique-gomide.jpg" title="Henrique Gomide, Ph.D" >}}
+{{< figure src="/images/team/henrique-gomide.webp" title="Henrique Gomide, Ph.D" >}}
 
 
 Kike is a machine learning engineer, scientific advisor and, consultant
@@ -17,7 +17,7 @@ scientific papers](https://scholar.google.com/citations?hl=en&user=iGhmQ8MAAAAJ&
 statistical methods to real-world problems.
 
 
-{{< figure src="/images/team/ana-flavia-souza.jpg" title="Ana Flávia Santos Souza" >}}
+{{< figure src="/images/team/ana-flavia-souza.webp" title="Ana Flávia Santos Souza" >}}
 
 Ana Flavia is a data science intern at Zetta Health Analytics. She is an [IBM
 certified Data Scientist](https://www.linkedin.com/in/ana-fl%C3%A1via-souza-2b06151a5/)
@@ -26,7 +26,7 @@ founded the PyLadies UFV and won medals Math Olympiad in high school.
 
 
 
-{{< figure src="/images/team/gabriel-kakizaki.jpeg" title="Gabriel Kakizaki" >}}
+{{< figure src="/images/team/gabriel-kakizaki.webp" title="Gabriel Kakizaki" >}}
 
 Gabriel is a data science intern at Zetta Health Analytics. He is an [IBM
 certified Data Scientist](https://www.linkedin.com/in/ana-fl%C3%A1via-souza-2b06151a5/)

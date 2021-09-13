@@ -1,6 +1,6 @@
 ---
 title: Contact
-featured_image: "/images/hero-background.png"
+featured_image: "/images/hero-background.webp"
 omit_header_text: true
 description: We'd love to hear from you
 type: page

@@ -1,6 +1,6 @@
 ---
 title: "Innovate Faster and Smarter"
-featured_image: "/images/hero-background.png"
+featured_image: "/images/hero-background.webp"
 description: "Human-Centered Artificial Intelligence for Sustainable Data Products"
 ---
 
