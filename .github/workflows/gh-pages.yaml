@@ -29,6 +29,5 @@ jobs:
         if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.TOKEN }}
-          external_repository: motiroai/motiroai.github.io
           publish_dir: ./public
           publish_branch: main
