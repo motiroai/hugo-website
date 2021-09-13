@@ -1,4 +1,4 @@
-baseURL = 'https://motiroai.github.io/hugo-website'
+baseURL = 'https://motiroai.github.io'
 languageCode = 'en-us'
 title = 'Motiro AI'
 theme = "ananke"
