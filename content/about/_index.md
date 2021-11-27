@@ -13,8 +13,7 @@ Kike is a machine learning engineer, scientific advisor and, consultant
 on Artificial Intelligence and Data Science. He founded Motiro AI after
 leaving Universidade Federal de Vicosa, ranked 17th in Latin America. 
 He is a certified [TensorFlow Developer](https://www.credential.net/02a436c2-d533-4cb8-977e-32832bdc7617) and has published over [twenty 
-scientific papers](https://scholar.google.com/citations?hl=en&user=iGhmQ8MAAAAJ&view_op=list_works&sortby=pubdate). His work mainly focuses on the application of
-statistical methods to real-world problems.
+scientific papers](https://scholar.google.com/citations?hl=en&user=iGhmQ8MAAAAJ&view_op=list_works&sortby=pubdate). His work mainly focuses on the application of statistical methods to real-world problems.
 
 
 {{< figure src="/images/team/ana-flavia-souza.webp" title="Ana Flávia Santos Souza" >}}

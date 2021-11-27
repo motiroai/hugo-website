@@ -32,6 +32,7 @@ enableRobotsTXT = true
   rss = ""
   # choose a background color from any on this page: http://tachyons.io/docs/themes/skins/ and preface it with "bg-"
   custom_css = ["css/custom.css"]
+  custom_js = ["js/custom.js"]
   body_classes = "avenir bg-near-white"
   background_color_class = "bg-dark-gray"
   featured_image = "/images/hero-background.webp"
